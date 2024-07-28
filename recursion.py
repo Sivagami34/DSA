@@ -22,3 +22,11 @@ def series(n):
     else:
         return series(n-2) + series(n-1)
 print(series(n))
+
+#recursion for factorial
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+print(factorial(n))
