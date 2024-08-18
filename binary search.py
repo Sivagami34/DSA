@@ -17,3 +17,19 @@ while start <= end:
         end = middle - 1
 if found == False:
     print("Item not in list")
+
+# using recursion
+
+def binary(array, key, start, end):
+    middle = round((start + end)/2)
+    print(array[middle])
+    if start <= end:
+        if array[middle] == key:
+            print("found at", middle)
+        elif array[middle] < key:
+            binary(array, key, middle+1, end)
+        elif array[middle] > key:
+            binary(array, key, start, middle-1)
+    else:
+        print("Item not found")
+binary(fruits, fruit, 0, len(fruits)-1)
