@@ -12,7 +12,10 @@ class Stack:
         else:
             print("stack overflow")
     def pop(self):
-        self.stack.pop()
+        if len(self.stack) != 0: 
+            self.stack.pop()
+        else:
+            print("stack underflow")
 
 fruit = Stack(3)
 fruit.display()
